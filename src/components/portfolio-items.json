@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Ayush Marketing",
+    "course": "MBA",
+    "thumbnail": "https://cu-project.s3.us-east-1.amazonaws.com/thumbnails/own.jpg",
+    "description": "Comprehensive marketing strategy analysis...",
+    "pdfUrl": "https://cu-project.s3.us-east-1.amazonaws.com/pdfs/23MBA20063+Summer+Internship+Report.pdf"
+  },
+  {
+    "id": 2,
+    "title": "Anshu Business",
+    "course": "BBA",
+    "thumbnail": "https://cu-project.s3.us-east-1.amazonaws.com/thumbnails/20240611_130709.jpg",
+    "description": "Complete business plan development",
+    "pdfUrl": "https://cu-project.s3.us-east-1.amazonaws.com/pdfs/Addie.pdf"
+  }
+]

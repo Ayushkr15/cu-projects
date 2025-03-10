@@ -1,18 +1,26 @@
 [
   {
     "id": 1,
-    "title": "Ayush Marketing",
-    "course": "MBA",
-    "thumbnail": "https://cu-project.s3.us-east-1.amazonaws.com/thumbnails/own.jpg",
-    "description": "Comprehensive marketing strategy analysis...",
-    "pdfUrl": "https://cu-project.s3.us-east-1.amazonaws.com/pdfs/23MBA20063+Summer+Internship+Report.pdf"
+    "title": "Examining the role of fin tech solutions in financial inclusion",
+    "course": "BBA",
+    "thumbnail": "https://cu-project.s3.us-east-1.amazonaws.com/thumbnails/BBA_1.png",
+    "description": "This project report from Chandigarh University analyzes how fintech solutions drive financial inclusion, particularly for underserved populations. It highlights that innovations like mobile banking (e.g., Kenya’s M-Pesa), digital payments, and peer-to-peer lending have enabled 1.2 billion adults globally to access financial accounts (2010–2017), yet 31% remain unbanked. Case studies, such as India’s India Stack, demonstrate fintech’s ability to reduce costs, enhance efficiency, and reach remote communities. However, challenges like regulatory barriers, cybersecurity risks, and the digital divide persist. The report recommends balanced regulatory frameworks, collaborations between fintech firms and traditional institutions, and investments in digital infrastructure and financial literacy. It concludes that coordinated efforts among governments, regulators, and industry stakeholders are essential to fully harness fintech’s potential for equitable financial inclusion.",
+    "pdfUrl": "https://cu-project.s3.us-east-1.amazonaws.com/pdfs/BBA_1.pdf"
   },
   {
     "id": 2,
-    "title": "Anshu Business",
+    "title": "Examining the role of CSR in conflict prevention and resolution in manufacturing sector",
     "course": "BBA",
-    "thumbnail": "https://cu-project.s3.us-east-1.amazonaws.com/thumbnails/20240611_130709.jpg",
-    "description": "Complete business plan development",
-    "pdfUrl": "https://cu-project.s3.us-east-1.amazonaws.com/pdfs/Addie.pdf"
+    "thumbnail": "https://cu-project.s3.us-east-1.amazonaws.com/thumbnails/BBA_2.png",
+    "description": "This project report from Chandigarh University analyzes how Corporate Social Responsibility (CSR) mitigates conflicts in manufacturing, focusing on Vardhman Textiles. Key findings reveal CSR initiatives in education, healthcare, rural development, and environmental protection (e.g., water conservation, skill programs) reduced labor disputes (55% of employees strongly agreed) and enhanced community trust. However, only 20% of customers linked Vardhman to CSR, indicating visibility gaps. Employee surveys (100 respondents) highlighted effective grievance management but noted lingering supply chain disputes (18%). Recommendations include boosting CSR transparency via social media, fostering NGO partnerships, and aligning initiatives with local needs to strengthen conflict prevention and sustainable impact.",
+    "pdfUrl": "https://cu-project.s3.us-east-1.amazonaws.com/pdfs/BBA_2.pdf"
+  },
+  {
+    "id": 3,
+    "title": "Search Engine Optimization and Digital Marketing Strategies at LDT Technology Pvt. Ltd",
+    "course": "MBA",
+    "thumbnail": "https://cu-project.s3.us-east-1.amazonaws.com/thumbnails/MBA_1.png",
+    "description": "This Summer Internship Report on Search Engine Optimization (SEO) and Digital Marketing Strategies at LDT Technology Pvt. Ltd. outlines the implementation and analysis of strategies to enhance the company’s digital presence as part of an MBA in Business Analytics. The project involved conducting SEO audits, keyword research, content development, and analytics setup using tools like Google Analytics, SEMrush, and SPSS Modeler. Key findings revealed an 83% increase in organic traffic, significant improvements in keyword rankings (e.g., Technology Solutions rose 25 positions), reduced bounce rates (from 60.5% to 52.3%), and doubled conversion rates (1.2% to 2.5%) over three months. User engagement metrics, including session duration and pages per session, also improved notably. The report concludes with actionable suggestions, such as adopting AI-based tools for content optimization, leveraging predictive analytics for audience segmentation, and expanding into multi-channel marketing. These strategies aim to sustain growth, enhance user experience, and align with LDT Technology’s long-term business objectives, demonstrating the successful integration of SEO practices with data-driven decision-making.",
+    "pdfUrl": "https://cu-project.s3.us-east-1.amazonaws.com/pdfs/MBA_1.pdf"
   }
 ]

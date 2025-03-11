@@ -1,9 +1,7 @@
-
 import React, { useState, useEffect } from "react";
-import { FileText, X } from "lucide-react";
+import { X, ChevronDown, ChevronUp } from "lucide-react";
 import { toast } from "sonner";
 
-// Define interface locally since we're removing Supabase
 interface PortfolioItem {
   id: number;
   title: string;
@@ -18,19 +16,19 @@ const PortfolioSection: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<number | null>(null);
   const [filter, setFilter] = useState<"ALL" | "MBA" | "BBA">("ALL");
   const [isLoading, setIsLoading] = useState(true);
+  const [expandedDescriptions, setExpandedDescriptions] = useState<Set<number>>(
+    new Set()
+  );
 
   // Load portfolio items from AWS S3
   useEffect(() => {
     const loadPortfolioItems = async () => {
       try {
         setIsLoading(true);
-
-        // Load portfolio data from S3 JSON file
         const response = await fetch(
           "https://cu-project.s3.us-east-1.amazonaws.com/portfolio-items.json"
         );
         if (!response.ok) throw new Error("Failed to fetch portfolio items");
-
         const items = await response.json();
         setPortfolioItems(items);
       } catch (error) {
@@ -40,9 +38,16 @@ const PortfolioSection: React.FC = () => {
         setIsLoading(false);
       }
     };
-
     loadPortfolioItems();
   }, []);
+
+  const toggleDescription = (id: number) => {
+    setExpandedDescriptions(prev => {
+      const newSet = new Set(prev);
+      newSet.has(id) ? newSet.delete(id) : newSet.add(id);
+      return newSet;
+    });
+  };
 
   const filteredItems =
     filter === "ALL"
@@ -62,6 +67,7 @@ const PortfolioSection: React.FC = () => {
   return (
     <section id="portfolio" className="py-20 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-8">
+        {/* Section Header */}
         <div className="text-center mb-12">
           <span className="text-xs font-medium px-3 py-1 rounded-full bg-primary/10 text-primary mb-3 inline-block">
             Our Portfolio
@@ -76,6 +82,7 @@ const PortfolioSection: React.FC = () => {
           </p>
         </div>
 
+        {/* Filter Buttons */}
         <div className="flex justify-center mb-8">
           <div className="inline-flex rounded-md bg-white shadow-sm p-1">
             <button
@@ -105,6 +112,7 @@ const PortfolioSection: React.FC = () => {
           </div>
         </div>
 
+        {/* Content / Spinner */}
         {isLoading ? (
           <div className="flex justify-center items-center min-h-[300px]">
             <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
@@ -114,34 +122,57 @@ const PortfolioSection: React.FC = () => {
             {filteredItems.map(item => (
               <div
                 key={item.id}
-                className="glass rounded-lg overflow-hidden group cursor-pointer hover:shadow-lg transition-all duration-300"
-                onClick={() => openPreview(item.id)}
+                className="rounded-lg overflow-hidden bg-white shadow hover:shadow-lg transition-all duration-300"
               >
+                {/* Thumbnail */}
                 <div className="relative h-64 overflow-hidden">
                   <img
                     src={item.thumbnail}
                     alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                    <div className="text-white">
-                      <span className="text-xs bg-primary px-2 py-1 rounded">
-                        {item.course}
-                      </span>
-                      <h3 className="font-medium mt-2">{item.title}</h3>
-                    </div>
-                  </div>
                 </div>
-                <div className="p-4">
-                  <span className="text-xs font-medium bg-primary/10 text-primary px-2 py-1 rounded">
+
+                {/* Card Content */}
+                <div className="p-4 flex flex-col">
+                  <span className="text-xs font-medium bg-primary/10 text-primary px-2 py-1 rounded self-start">
                     {item.course}
                   </span>
-                  <h3 className="font-medium mt-2 group-hover:text-primary transition-colors duration-200">
+                  <h3 className="font-medium mt-2 mb-2 text-lg">
                     {item.title}
                   </h3>
-                  <div className="flex items-center text-sm text-muted-foreground mt-2">
-                    <FileText size={16} className="mr-1" />
-                    <span>Click to preview</span>
+
+                  {/* Description with Read More / Read Less */}
+                  <div className="text-sm text-muted-foreground text-justify">
+                    {expandedDescriptions.has(item.id)
+                      ? item.description
+                      : `${item.description.slice(0, 150)}...`}
+                  </div>
+                  {item.description.length > 150 && (
+                    <button
+                      onClick={() => toggleDescription(item.id)}
+                      className="text-primary hover:text-primary/80 mt-2 flex items-center text-sm"
+                    >
+                      {expandedDescriptions.has(item.id) ? (
+                        <>
+                          Read Less <ChevronUp size={16} className="ml-1" />
+                        </>
+                      ) : (
+                        <>
+                          Read More <ChevronDown size={16} className="ml-1" />
+                        </>
+                      )}
+                    </button>
+                  )}
+
+                  {/* Footer with "View PDF" button */}
+                  <div className="mt-4 flex justify-end">
+                    <button
+                      onClick={() => openPreview(item.id)}
+                      className="btn-premium px-4 py-2 text-sm rounded-md"
+                    >
+                      View PDF
+                    </button>
                   </div>
                 </div>
               </div>
@@ -166,7 +197,6 @@ const PortfolioSection: React.FC = () => {
                 </button>
               </div>
               <div className="flex-1 overflow-auto p-4">
-                {/* Display the PDF iframe */}
                 <div className="w-full h-[70vh]">
                   <iframe
                     src={

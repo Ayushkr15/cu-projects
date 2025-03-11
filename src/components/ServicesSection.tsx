@@ -107,7 +107,7 @@ const ServicesSection: React.FC = () => {
             <ul className="space-y-2 text-sm">
               <li className="flex items-start">
                 <span className="h-5 w-5 text-primary mr-2 flex-shrink-0">✓</span>
-                <span>Plagiarism-free content with Turnitin report</span>
+                <span>Plagiarism-free content</span>
               </li>
               <li className="flex items-start">
                 <span className="h-5 w-5 text-primary mr-2 flex-shrink-0">✓</span>
@@ -115,7 +115,7 @@ const ServicesSection: React.FC = () => {
               </li>
               <li className="flex items-start">
                 <span className="h-5 w-5 text-primary mr-2 flex-shrink-0">✓</span>
-                <span>Revisions available if needed</span>
+                <span>Unlimited revisions till the viva date</span>
               </li>
             </ul>
           </div>

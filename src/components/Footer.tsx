@@ -1,6 +1,6 @@
-
-import React from 'react';
-import { Mail, PhoneCall } from 'lucide-react';
+import React from "react";
+import { Mail, PhoneCall } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
@@ -13,19 +13,19 @@ const Footer: React.FC = () => {
               <span className="font-medium">Project Reports</span>
             </div>
             <p className="text-gray-400 max-w-xs mb-6">
-              Professional project report writing services for Chandigarh University
-              BBA and MBA students.
+              Professional project report writing services for Chandigarh
+              University BBA and MBA students.
             </p>
             <div className="flex space-x-4">
-              <a 
-                href="mailto:support@cuprojectreports.com" 
+              <a
+                href="mailto:support@cuprojectreports.com"
                 className="text-gray-400 hover:text-primary transition-colors duration-300"
                 aria-label="Email us"
               >
                 <Mail size={20} />
               </a>
-              <a 
-                href="tel:+919876543210" 
+              <a
+                href="tel:+919876543210"
                 className="text-gray-400 hover:text-primary transition-colors duration-300"
                 aria-label="Call us"
               >
@@ -33,30 +33,42 @@ const Footer: React.FC = () => {
               </a>
             </div>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-sm font-medium uppercase mb-4">Services</h3>
               <ul className="space-y-3">
                 <li>
-                  <button 
-                    onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+                  <button
+                    onClick={() =>
+                      document
+                        .getElementById("services")
+                        ?.scrollIntoView({ behavior: "smooth" })
+                    }
                     className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
                   >
                     BBA Reports
                   </button>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+                  <button
+                    onClick={() =>
+                      document
+                        .getElementById("services")
+                        ?.scrollIntoView({ behavior: "smooth" })
+                    }
                     className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
                   >
                     MBA Reports
                   </button>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+                  <button
+                    onClick={() =>
+                      document
+                        .getElementById("portfolio")
+                        ?.scrollIntoView({ behavior: "smooth" })
+                    }
                     className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
                   >
                     View Samples
@@ -64,29 +76,43 @@ const Footer: React.FC = () => {
                 </li>
               </ul>
             </div>
-            
+
             <div>
-              <h3 className="text-sm font-medium uppercase mb-4">Quick Links</h3>
+              <h3 className="text-sm font-medium uppercase mb-4">
+                Quick Links
+              </h3>
               <ul className="space-y-3">
                 <li>
-                  <button 
-                    onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
+                  <button
+                    onClick={() =>
+                      document
+                        .getElementById("home")
+                        ?.scrollIntoView({ behavior: "smooth" })
+                    }
                     className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
                   >
                     Home
                   </button>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => document.getElementById('order')?.scrollIntoView({ behavior: 'smooth' })}
+                  <button
+                    onClick={() =>
+                      document
+                        .getElementById("order")
+                        ?.scrollIntoView({ behavior: "smooth" })
+                    }
                     className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
                   >
                     Order Now
                   </button>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+                  <button
+                    onClick={() =>
+                      document
+                        .getElementById("services")
+                        ?.scrollIntoView({ behavior: "smooth" })
+                    }
                     className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
                   >
                     Pricing
@@ -94,32 +120,44 @@ const Footer: React.FC = () => {
                 </li>
               </ul>
             </div>
-            
+
             <div className="col-span-2 md:col-span-1">
               <h3 className="text-sm font-medium uppercase mb-4">Contact Us</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <Mail size={16} className="mt-1 mr-3 text-gray-400" />
-                  <span className="text-gray-400 text-sm">support@cuprojectreports.com</span>
-                </li>
-                <li className="flex items-start">
-                  <PhoneCall size={16} className="mt-1 mr-3 text-gray-400" />
-                  <span className="text-gray-400 text-sm">+91 98765 43210</span>
+                  <span className="text-gray-400 text-sm">
+                    romanempire1380@gmail.com
+                  </span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        
+
         <div className="pt-8 text-center text-sm text-gray-500">
-          <p>&copy; {new Date().getFullYear()} CU Project Reports. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} CU Project Wallah. All rights
+            reserved.
+          </p>
           <p className="mt-2">
-            <span className="mx-2">Privacy Policy</span>
-            <span className="mx-2">Terms of Service</span>
+            <Link
+              to="/privacy-policy"
+              className="mx-2 text-gray-400 hover:text-white transition-colors duration-300 text-sm"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              to="/terms-of-service"
+              className="mx-2 text-gray-400 hover:text-white transition-colors duration-300 text-sm"
+            >
+              Terms of Service
+            </Link>
           </p>
           <p className="mt-4 text-xs">
-            Disclaimer: We provide customized model reports for reference purposes only. 
-            Students are advised to use our services ethically and responsibly.
+            Disclaimer: We provide customized model reports for reference
+            purposes only. Students are advised to use our services ethically
+            and responsibly.
           </p>
         </div>
       </div>

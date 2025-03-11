@@ -22,5 +22,37 @@
     "thumbnail": "https://cu-project.s3.us-east-1.amazonaws.com/thumbnails/MBA_1.png",
     "description": "This Summer Internship Report on Search Engine Optimization (SEO) and Digital Marketing Strategies at LDT Technology Pvt. Ltd. outlines the implementation and analysis of strategies to enhance the company’s digital presence as part of an MBA in Business Analytics. The project involved conducting SEO audits, keyword research, content development, and analytics setup using tools like Google Analytics, SEMrush, and SPSS Modeler.",
     "pdfUrl": "https://cu-project.s3.us-east-1.amazonaws.com/pdfs/MBA_1.pdf"
+  },
+  {
+    "id": 4,
+    "title": "The impact of organizational culture on business sustainability of MNCs and it's operational performance",
+    "course": "BBA",
+    "thumbnail": "https://cu-project.s3.us-east-1.amazonaws.com/thumbnails/BBA_3.png",
+    "description": "This project report from Chandigarh University examines the impact of organizational culture on the sustainability and operational performance of multinational corporations (MNCs). Analyzing companies like Infosys and Kotak Mahindra, it highlights how cultural elements—leadership, communication, and governance—drive sustainability initiatives, employee engagement, and innovation. Key findings reveal that transparent governance, diversity programs, and stakeholder alignment enhance long-term resilience, while misaligned cultures hinder progress. The study recommends fostering open communication, integrating sustainability into core values, and leveraging partnerships to strengthen cultural adaptability. By aligning cultural dynamics with global sustainability goals, MNCs can improve operational efficiency and ethical practices across diverse markets.",
+    "pdfUrl": "https://cu-project.s3.us-east-1.amazonaws.com/pdfs/BBA_3.pdf"
+  },
+  {
+    "id": 5,
+    "title": "Work life balance among cooperative women: Review of Rural and Urban Women",
+    "course": "BBA",
+    "thumbnail": "https://cu-project.s3.us-east-1.amazonaws.com/thumbnails/BBA_4.png",
+    "description": "This project report examines the work-life balance of cooperative women in rural and urban settings, exploring the challenges and opportunities they face. It highlights the impact of cultural, socioeconomic, and infrastructural factors on their ability to balance professional and personal responsibilities. The study aims to provide insights for empowering women, improving organizational policies, and promoting gender equality in cooperative environments. Through a mixed-methods approach, the research offers actionable recommendations to support women in achieving a healthier work-life balance, contributing to sustainable development and inclusive societies.",
+    "pdfUrl": "https://cu-project.s3.us-east-1.amazonaws.com/pdfs/BBA_4.pdf"
+  },
+  {
+    "id": 6,
+    "title": "Understanding Consumer Perceptions and Behaviours Towards Sustainable and Eco-Friendly Brands",
+    "course": "BBA",
+    "thumbnail": "https://cu-project.s3.us-east-1.amazonaws.com/thumbnails/BBA_5.png",
+    "description": "This project report explores consumer perceptions and behaviors toward sustainable and eco-friendly brands, focusing on the growing importance of environmental awareness in purchasing decisions. It examines factors like brand authenticity, product quality, and marketing strategies, such as green messaging and eco-labeling, that influence consumer preferences. The study employs a mixed-methods approach, combining qualitative and quantitative analyses to provide insights into how businesses can align with consumer values and promote sustainable practices. The findings highlight the need for transparency, education, and innovation in fostering brand loyalty and driving positive environmental change. The report concludes with actionable recommendations for businesses, policymakers, and stakeholders to enhance sustainability efforts and meet the demands of eco-conscious consumers.",
+    "pdfUrl": "https://cu-project.s3.us-east-1.amazonaws.com/pdfs/BBA_5.pdf"
+  },
+  {
+    "id": 7,
+    "title": "Digital marketing and its impact on revenue generation",
+    "course": "BBA",
+    "thumbnail": "https://cu-project.s3.us-east-1.amazonaws.com/thumbnails/BBA_6.png",
+    "description": "Digital Marketing and its Impact on Revenue Generation explores how digital marketing strategies influence business growth by leveraging digital channels like social media, SEO, SEM, and personalized content to enhance customer engagement, increase website traffic, and ultimately boost revenue. It highlights emerging trends, key marketing techniques, and the benefits of data-driven strategies, emphasizing digital marketing's cost-effectiveness, flexibility, and scalability as powerful tools for businesses in today's competitive landscape.",
+    "pdfUrl": "https://cu-project.s3.us-east-1.amazonaws.com/pdfs/BBA_6.pdf"
   }
 ]
